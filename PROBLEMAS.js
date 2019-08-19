@@ -17,7 +17,11 @@ function reversa(array){
     }
     return inv;
 }
-//PROBLEMA N�3:CONCATENAR
+//PROBLEMA N°3
+function reversa(array){
+    reversa(array);
+}
+//PROBLEMA N�4:CONCATENAR
 
 function concatenar(a,b){
     let c=[];
@@ -31,8 +35,12 @@ function concatenar(a,b){
     }
     return c;
 }
-
-//PROBLEMA N�4: SOCIEDAD SECRETA
+//PROBLEMA N°5
+function concatenar(a,b){
+    let c;
+    c = a.concat(b);
+}
+//PROBLEMA N�6: SOCIEDAD SECRETA
 
 function company(array){
     cadena ="";
@@ -42,7 +50,7 @@ function company(array){
     return cadena;
 }
 
-//PROBLEMA N�5: COMPAPA INVERSA
+//PROBLEMA N�7: COMPAPA INVERSA
 
 function inversa(numero){
     let inv=0;
@@ -59,7 +67,7 @@ function inversa(numero){
     }
 }
 
-//PROBLEMA N�6: CONVERTI STRING - DECIMAL
+//PROBLEMA N�8: CONVERTI STRING - DECIMAL
 
 function convertir(a){
    let temp="";
@@ -73,7 +81,7 @@ function convertir(a){
    return a;
 }
 
-//PROBLEMA N�7: FACTORIAL
+//PROBLEMA N�9: FACTORIAL
 
 function factorial(numero){
     acu=1;
@@ -83,7 +91,7 @@ function factorial(numero){
     return acu;
 }
 
-//PROBLEMA N�8: IMPRIME DIVISORES
+//PROBLEMA N�10: IMPRIME DIVISORES
 
 function printDivisores(num){
     let a=[];
@@ -98,7 +106,7 @@ function printDivisores(num){
     }
 }
 
-//PROBLEMA N°9: menor mayor
+//PROBLEMA N°11: menor mayor
 
 function menorMayor(a){
     let temp=0;
@@ -113,8 +121,95 @@ function menorMayor(a){
     }
     return a;
 }
+//PROBLEMA N°12
+function RazonGeometrica(a){
+    let razon=0;
+    let siguiente=0;
+    for(let i=0;i<a.length-1;i++){
+        razon=a[i+1]/a[i];
+    }
+    siguiente=a[a.length-1]*razon;
+    a.push(siguiente);
+    return a;
+}
 
-//PROBLEMA N°10: mayor menor
+//PROBLEMA N°13
+function Secuencia(a){
+    let razon=0;
+    let siguiente=0;
+    for(let i=0;i<a.length-1;i++){
+        razon=a[i+1]-a[i];
+    }
+    siguiente=a[a.length-1]+razon;
+    a.push(siguiente);
+    return a;
+}
+
+//PROBLEMA N°14
+function devolver(a){
+    index=a.length-1;
+    return a[index];
+}
+
+//PROBLEMA N°15
+function mes(numero){
+    let meses=["enero","febrero","marzo","abril","mayo","junio","julio","agosto","setiembre","octubre","noviembre","diciembre"];
+    return meses[numero-1];
+}
+
+//PROBLEMA N°16
+function validar(a){
+    let correcto=0;
+    for(let i=0;i<a.length;i++){
+        if(a[i]%2==0){
+            correcto++;
+        }
+    }
+    if(correcto==a.length){
+        return true;
+    }
+    else{
+        return false;
+    }
+}
+
+//PROBLEMA N°17
+function rebanada(a,b,c){
+    if(c==0){
+        return true;
+    }
+    else{
+        if(c*b < a){
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
+}
+
+//PROBLEMA N°18
+function fibonaci(numero){
+    let a=[1,1];
+    for(let i=1;i<numero;i++){
+        a[a.length]=a[i-1]+a[i];
+    }
+    return a[a.length-1];
+}
+
+//PROBLEMA N°19
+function razonAritmetica(a){
+    let razon=0;
+    let siguiente=0;
+    for(let i=0;i<a.length-1;i++){
+        razon=a[i+1]-a[i];
+    }
+    siguiente=a[a.length-1]+razon;
+    a.push(siguiente);
+    return a;
+}
+
+//PROBLEMA N°20: mayor menor
 
 function menorMayor(a){
     let temp=0;
